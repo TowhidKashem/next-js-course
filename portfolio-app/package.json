@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "deploy": "cd out && ./.bin/now --public"
+    "deploy": "cd out && now --public"
   },
   "repository": {
     "type": "git",
