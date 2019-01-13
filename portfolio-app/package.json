@@ -1,0 +1,24 @@
+{
+  "name": "udemy-universal-react-with-next-js-ultimate-guide-tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TowhidKashem/udemy-universal-react-with-next-js-ultimate-guide-tut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TowhidKashem/udemy-universal-react-with-next-js-ultimate-guide-tut/issues"
+  },
+  "homepage": "https://github.com/TowhidKashem/udemy-universal-react-with-next-js-ultimate-guide-tut#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
