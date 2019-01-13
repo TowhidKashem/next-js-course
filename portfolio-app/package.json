@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "cd out && ./.bin/now --public"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,9 @@
   },
   "homepage": "https://github.com/TowhidKashem/udemy-universal-react-with-next-js-ultimate-guide-tut#readme",
   "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
+    "nprogress": "^0.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
