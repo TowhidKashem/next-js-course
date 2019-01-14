@@ -32,7 +32,7 @@ export default class Story extends React.Component {
     }
 
     return (
-      <Layout title={story.title} backButton={true}>
+      <Layout title={story.title} backButton>
         <main>
           <h1 className="story-title">
             <a href={story.url}>{story.title}</a>
