@@ -1,0 +1,19 @@
+Static Site Deployment:
+
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "cd out && now --public"
+  }
+
+  > yarn run build
+    * Builds production assets
+    * In ".next/" folder there is a BUILD_ID file which contains the id reference to the folder by the same name generated inside the ".next/static" folder 
+
+  > yarn run export
+    * This command only needed for static sites
+    * Will generate final assets from the aforementioned id folder in the static dir and put it inside a "out" folder at the root ready for deployment 
+
+  > yarn run deploy
+    * Above npm script uses Zeit as the platform host but put your own service's command there
