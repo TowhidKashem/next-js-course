@@ -1,9 +1,12 @@
+import Router from "next/router";
 import { loginUser } from "../lib/auth";
 
 export default class LoginForm extends React.Component {
   state = {
-    email: "",
-    password: ""
+    email: "Sincere@april.biz",
+    password: "hildegard.org",
+    error: "",
+    isLoading: false
   };
 
   handleChange = event => {
@@ -15,10 +18,30 @@ export default class LoginForm extends React.Component {
 
     const { email, password } = this.state;
 
-    loginUser(email, password);
+    this.setState({
+      error: "",
+      isLoading: true
+    });
+
+    loginUser(email, password)
+      .then(() => {
+        Router.push("/profile");
+      })
+      .catch(this.showError);
+  };
+
+  showError = err => {
+    const error = (err.response && err.response.data) || err.message;
+    this.setState({
+      error,
+      isLoading: false
+    });
+    console.log("error: ", err);
   };
 
   render() {
+    const { email, password, error, isLoading } = this.state;
+
     return (
       <form action="" onSubmit={this.handleSubmit}>
         <div>
@@ -26,18 +49,26 @@ export default class LoginForm extends React.Component {
             type="email"
             name="email"
             placeholder="email"
+            value={email}
             onChange={this.handleChange}
           />
         </div>
+
         <div>
           <input
             type="password"
             name="password"
             placeholder="password"
+            value={password}
             onChange={this.handleChange}
           />
         </div>
-        <button type="submit">Submit</button>
+
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Sending" : "Submit"}
+        </button>
+
+        {error && <div>{error}</div>}
       </form>
     );
   }
