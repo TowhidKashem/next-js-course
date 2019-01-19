@@ -1,0 +1,30 @@
+POST http://localhost:3000/api/auth/signup
+content-type: application/json
+
+{
+  "name": "tkpop777",
+  "email": "foo@bar.com",
+  "password": "abc123"
+}
+
+###
+
+POST http://localhost:3000/api/auth/signin
+content-type: application/json
+
+{
+  "email": "foo@bar.com",
+  "password": "abc123"
+}
+
+###
+
+GET http://localhost:3000/api/auth/signout
+
+###
+
+GET http://localhost:3000/api/users
+
+###
+
+GET http://localhost:3000/api/users/5c426d691bf2dd1db411c03e

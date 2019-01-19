@@ -36,6 +36,10 @@ const styles = theme => ({
     alignItems: "center",
     padding: theme.spacing.unit * 2
   },
+  title: {
+    marginTop: theme.spacing.unit * 2,
+    color: theme.palette.openTitle
+  },
   avatar: {
     margin: theme.spacing.unit,
     backgroundColor: theme.palette.secondary.main

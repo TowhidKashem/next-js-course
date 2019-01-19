@@ -59,6 +59,10 @@ const styles = theme => ({
     textDecoration: "none",
     color: "white"
   },
+  title: {
+    marginTop: theme.spacing.unit * 2,
+    color: theme.palette.openTitle
+  },
   avatar: {
     margin: theme.spacing.unit,
     backgroundColor: theme.palette.secondary.main
@@ -71,7 +75,7 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 2
   },
   snack: {
-    color: theme.palette.secondary.light
+    color: theme.palette.protectedTitle
   },
   icon: {
     padding: "0px 2px 2px 0px",
